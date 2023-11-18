@@ -3,6 +3,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 import SearchIcon from '@mui/icons-material/Search';
 import style from "./search.module.css";
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 const Search = () => {
   const [search,setSearch]=useState("");
@@ -21,8 +22,18 @@ const Search = () => {
     });
   }
 
+  const handleFetch=async()=>{
+    try{
+      let response=await axios.get("http://localhost:5000/exchanges/get-exchanges");
+  }catch(err){
+      console.log(err);
+  }
+  }
+
   return (
-    <div className="d-flex justify-content-center mt-5">
+    <>
+     <button className='btn btn-success ms-2' onClick={handleFetch}>Fetch exchanges</button>
+    <div className="d-flex justify-content-center mt-2">
     <div className={style.form_group}>
       <div className={style.input_with_icon}>
       <BusinessIcon className={style.icon_inside_input} />
@@ -31,6 +42,7 @@ const Search = () => {
         </div>
     </div>
     </div>
+    </>
   )
 }
 
