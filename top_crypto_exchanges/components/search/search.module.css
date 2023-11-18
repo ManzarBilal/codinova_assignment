@@ -1,0 +1,29 @@
+.form_group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input_with_icon {
+    position: relative;
+  }
+  
+  .input_with_icon input[type="text"] {
+    padding-left: 2.5rem; /* Adjust as needed */
+    padding-right: 2.5rem; /* Adjust as needed */
+    /* Other styles */
+  }
+  
+  .icon_inside_input {
+    position: absolute;
+    left: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .icon_inside_input1 {
+    position: absolute;
+    cursor: pointer;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+  }

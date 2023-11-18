@@ -1,0 +1,7 @@
+.horizontal_line {
+    width: 75px;
+    height: 2px; /* Change the height as needed */
+    margin: 0 auto;
+    background-color: #0d6efd;
+    margin-bottom: -17px;
+  }
