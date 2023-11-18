@@ -24,7 +24,11 @@ const Search = () => {
 
   const handleFetch=async()=>{
     try{
-      let response=await axios.get("http://localhost:5000/exchanges/get-exchanges");
+      let response=await axios.get("https://sparetradebackend-production.up.railway.app/get-exchanges");
+      router.push({
+        pathname: router.pathname, 
+        query: { page: 1 },
+      });
   }catch(err){
       console.log(err);
   }
