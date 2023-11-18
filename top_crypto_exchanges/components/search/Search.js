@@ -24,7 +24,7 @@ const Search = () => {
 
   const handleFetch=async()=>{
     try{
-      let response=await axios.get("https://sparetradebackend-production.up.railway.app/get-exchanges");
+      let response=await axios.get("http://localhost:5000/exchanges/get-exchanges");
       router.push({
         pathname: router.pathname, 
         query: { page: 1 },
