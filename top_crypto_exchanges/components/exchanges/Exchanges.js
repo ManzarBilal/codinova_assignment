@@ -15,7 +15,7 @@ const Exchanges = () => {
 
     const getExchanges=async()=>{
         try{
-            let response=await axios.get(`http://localhost:5000/exchanges/get-exchanges-list?page=${page}&name=${name}`);
+            let response=await axios.get(`https://sparetradebackend-production.up.railway.app/get-exchanges-list?page=${page}&name=${name}`);
             let {data}=response;
             setData(data);
         }catch(err){
